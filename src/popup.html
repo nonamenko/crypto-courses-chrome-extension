@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Set character encoding -->
         <meta charset="UTF-8" />
+        <!-- Ensure compatibility with IE -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Set viewport for responsive design -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Page title -->
         <title>CryptoCourses</title>
+        <!-- Link to the main CSS file -->
         <link href="./main.css" rel="stylesheet" />
     </head>
     <body>
+        <!-- Main container for the page content -->
         <div class="container">
+            <!-- Dropdown container for tokens and fiat options -->
             <div class="dropdown_container" id="dropdown_container">
+                <!-- Section for displaying tokens -->
                 <div class="tokens">
                     <p>Tokens:</p>
                 </div>
+                <!-- Section for displaying fiat currencies -->
                 <div class="fiat">
                     <p>Fiat:</p>
                 </div>
             </div>
 
+            <!-- Section for "From" currency input -->
             <div class="part">
                 <h3>From:</h3>
                 <div class="input_wrap">
+                    <!-- Container for selecting the currency for the "From" field -->
                     <div class="select_container" id="from_cur">
                         <div class="selected_token">
+                            <!-- Icon representing the currency (Bitcoin in this case) -->
                             <img src="../assets/currencies/bitcoin.webp" alt="dollar.webp" />
                             <span>BTC</span>
                         </div>
+                        <!-- SVG icon for dropdown indicator -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M12 16C11.7663 16.0005 11.5399 15.9191 11.36 15.77L5.36 10.77C5.15578 10.6003 5.02736 10.3564 5.00298 10.0919C4.9786 9.8275 5.06026 9.56422 5.23 9.36C5.39974 9.15578 5.64365 9.02736 5.90808 9.00298C6.1725 8.9786 6.43578 9.06026 6.64 9.23L12 13.71L17.36 9.39C17.4623 9.30694 17.58 9.2449 17.7063 9.20747C17.8327 9.17004 17.9652 9.15795 18.0962 9.17189C18.2272 9.18582 18.3542 9.22552 18.4698 9.2887C18.5855 9.35187 18.6875 9.43727 18.77 9.54C18.8616 9.64282 18.9309 9.76345 18.9737 9.89432C19.0165 10.0252 19.0318 10.1635 19.0187 10.3006C19.0055 10.4376 18.9642 10.5705 18.8974 10.6909C18.8305 10.8112 18.7395 10.9165 18.63 11L12.63 15.83C12.4449 15.9555 12.2231 16.0154 12 16Z"
@@ -33,17 +46,22 @@
                             />
                         </svg>
                     </div>
+                    <!-- Input field for entering the "From" amount -->
                     <input type="number" id="from_val" placeholder="0.0" />
                 </div>
             </div>
+            <!-- Section for "To" currency input -->
             <div class="part">
                 <h3>To:</h3>
                 <div class="input_wrap">
+                    <!-- Container for selecting the currency for the "To" field -->
                     <div class="select_container" id="to_cur">
                         <div class="selected_token">
+                            <!-- Icon representing the currency (USD in this case) -->
                             <img src="../assets/currencies/dollar.webp" alt="dollar.webp" />
                             <span>USD</span>
                         </div>
+                        <!-- SVG icon for dropdown indicator -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M12 16C11.7663 16.0005 11.5399 15.9191 11.36 15.77L5.36 10.77C5.15578 10.6003 5.02736 10.3564 5.00298 10.0919C4.9786 9.8275 5.06026 9.56422 5.23 9.36C5.39974 9.15578 5.64365 9.02736 5.90808 9.00298C6.1725 8.9786 6.43578 9.06026 6.64 9.23L12 13.71L17.36 9.39C17.4623 9.30694 17.58 9.2449 17.7063 9.20747C17.8327 9.17004 17.9652 9.15795 18.0962 9.17189C18.2272 9.18582 18.3542 9.22552 18.4698 9.2887C18.5855 9.35187 18.6875 9.43727 18.77 9.54C18.8616 9.64282 18.9309 9.76345 18.9737 9.89432C19.0165 10.0252 19.0318 10.1635 19.0187 10.3006C19.0055 10.4376 18.9642 10.5705 18.8974 10.6909C18.8305 10.8112 18.7395 10.9165 18.63 11L12.63 15.83C12.4449 15.9555 12.2231 16.0154 12 16Z"
@@ -51,10 +69,12 @@
                             />
                         </svg>
                     </div>
+                    <!-- Input field for the "To" amount; set to readonly -->
                     <input type="number" id="to_val" placeholder="0.0" readonly />
                 </div>
             </div>
         </div>
     </body>
+    <!-- Include external JavaScript file -->
     <script src="script.js"></script>
 </html>
